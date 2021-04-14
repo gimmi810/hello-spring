@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-//@Service
+@Service
 public class MemberService {
 
     private final MemberRepository memberRepository;
 
-    //@Autowired
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
@@ -39,7 +39,7 @@ public class MemberService {
     /**
      * 전체 회원 조회
      */
-    public List<Member> findMeembers() {
+    public List<Member> findMembers() {
         return memberRepository.findAll();
     }
 
